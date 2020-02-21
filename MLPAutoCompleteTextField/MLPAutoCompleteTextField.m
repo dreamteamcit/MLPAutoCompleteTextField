@@ -508,12 +508,6 @@ withAutoCompleteString:(NSString *)string
     
     [self setAutoCompleteTableCellBackgroundColor:[UIColor clearColor]];
     
-    UIFont *regularFont = [UIFont systemFontOfSize:13];
-    [self setAutoCompleteRegularFontName:regularFont.fontName];
-    
-    UIFont *boldFont = [UIFont boldSystemFontOfSize:13];
-    [self setAutoCompleteBoldFontName:boldFont.fontName];
-    
     [self setAutoCompleteSuggestions:[NSMutableArray array]];
     
     [self setAutoCompleteSortQueue:[NSOperationQueue new]];
@@ -858,10 +852,9 @@ withAutoCompleteString:(NSString *)string
 
 - (NSAttributedString *)boldedString:(NSString *)string withRange:(NSRange)boldRange
 {
-    UIFont *boldFont = [UIFont fontWithName:self.autoCompleteBoldFontName
-                                       size:self.autoCompleteFontSize];
-    UIFont *regularFont = [UIFont fontWithName:self.autoCompleteRegularFontName
-                                          size:self.autoCompleteFontSize];
+    UIFont *regularFont = [UIFont systemFontOfSize:13];
+    
+    UIFont *boldFont = [UIFont boldSystemFontOfSize:13];
     
     NSDictionary *boldTextAttributes = @{NSFontAttributeName : boldFont};
     NSDictionary *regularTextAttributes = @{NSFontAttributeName : regularFont};

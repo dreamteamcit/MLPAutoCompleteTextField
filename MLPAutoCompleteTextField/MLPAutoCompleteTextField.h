@@ -54,8 +54,6 @@
 @property (assign) BOOL autoCompleteTableViewHidden;
 
 @property (assign) CGFloat autoCompleteFontSize;
-@property (strong) NSString *autoCompleteBoldFontName;
-@property (strong) NSString *autoCompleteRegularFontName;
 
 @property (assign) NSInteger maximumNumberOfAutoCompleteRows;
 @property (assign) CGFloat partOfAutoCompleteRowHeightToCut; // this number multiplied by autoCompleteRowHeight will be subtracted from total tableView height.
